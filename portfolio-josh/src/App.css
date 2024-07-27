@@ -1,0 +1,42 @@
+
+.nav-bg{
+  background-color: #f7f7f7;
+}
+.margin-reduce-top{
+  margin-top: -2rem !important;
+}
+.project-bg{
+  background-color: #F0F0F6 !important;
+}
+
+.text-skip-line {
+  width: 50% !important; /* Adjust the width as needed */
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5; /* Adjust the line height as needed */
+  color: #6b7280; /* Adjust the color as needed */
+}
+.review-card {
+  max-width: 350px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the card horizontally */
+}
+
+.star-rating {
+  color: #ffd700; /* Gold color for stars */
+}
+
+.profile img {
+  object-fit: cover;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+.logo-bg{
+  background-color: #f7f7f7 !important;
+}
+
