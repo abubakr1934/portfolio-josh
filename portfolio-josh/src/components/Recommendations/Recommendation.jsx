@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+// Install Swiper modules
+
 
 const Recommendation = () => {
     const [reviews, setReviews] = useState([]);
@@ -39,9 +41,9 @@ const Recommendation = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <div className='w-full flex mb-4 px-4'>
+            <div className='w-[85%] flex mb-4'>
                 <Swiper
-                    spaceBetween={30}  // Increased space between slides
+                    spaceBetween={10}
                     slidesPerView={4}
                     centeredSlides={true}
                     pagination={{
@@ -68,7 +70,7 @@ const Recommendation = () => {
                     className='w-full flex'
                 >
                     {reviews.map((review, index) => (
-                        <SwiperSlide key={index} className='swiper-slide-custom'>
+                        <SwiperSlide key={index}>
                             <div className='review-item text-left p-6 bg-white shadow-xl flex flex-col justify-start gap-2'>
                                 <div className='review-stars mb-2'>{review.stars}</div>
                                 <h3 className='text-xl font-semibold mb-2'>{review.title}</h3>
@@ -79,7 +81,9 @@ const Recommendation = () => {
                                         <strong>{review.name}</strong>
                                         <p> {review.designation}</p>
                                     </div>
+
                                 </div>
+
                             </div>
                         </SwiperSlide>
                     ))}

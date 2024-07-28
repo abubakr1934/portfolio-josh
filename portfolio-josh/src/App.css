@@ -43,3 +43,9 @@
 .bg-percentage{
   background-color: #FFB400 !important;
 }
+.border-divs{
+  border: 1.5px solid #FFB400 !important;
+}
+.custom-top-margin{
+  margin-top: 0.074rem !important;
+}
