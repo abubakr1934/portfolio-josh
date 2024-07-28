@@ -93,7 +93,60 @@ const projects = [
 ];
 app.use(bodyParser.json());
 let submissions = [];
+const skillsData = [
+  {
+    domain: "Front End Development",
+    skills: [
+      { name: "HTML", percentage: 90 },
+      { name: "CSS", percentage: 85 },
+      { name: "JavaScript", percentage: 80 },
+      { name: "PHP", percentage: 75 },
+      { name: "WordPress", percentage: 85 },
+    ],
+  },
+  {
+    domain: "Languages",
+    skills: [
+      { name: "Hindi", percentage: 90 },
+      { name: "English", percentage: 85 },
+    ],
+  },
+  {
+    domain: "Back End Development",
+    skills: [
+      { name: "NodeJS", percentage: 90 },
+      { name: "SSR", percentage: 85 },
+    ],
+  },
+  {
+    domain: "Front End Development",
+    skills: [
+      { name: "HTML", percentage: 90 },
+      { name: "CSS", percentage: 85 },
+      { name: "JavaScript", percentage: 80 },
+      { name: "PHP", percentage: 75 },
+      { name: "WordPress", percentage: 85 },
+    ],
+  },
+  {
+    domain: "Languages",
+    skills: [
+      { name: "Hindi", percentage: 90 },
+      { name: "English", percentage: 85 },
+    ],
+  },
+  {
+    domain: "Back End Development",
+    skills: [
+      { name: "NodeJS", percentage: 90 },
+      { name: "SSR", percentage: 85 },
+    ],
+  },
+];
 
+app.get('/skills', (req, res) => {
+  res.json(skillsData);
+});
 app.post('/submit', (req, res) => {
     const data = req.body;
     submissions.push(data);  
@@ -107,7 +160,11 @@ app.get('/api/reviews',(req,res)=>{
   res.json(Review)
 })
 
-
+app.post('/skills', (req, res) => {
+  const newSkillData = req.body;
+  skillsData.push(newSkillData);
+  res.status(201).json(newSkillData);
+});
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
