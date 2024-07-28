@@ -9,9 +9,9 @@ const ProgressBar = ({ skill, percentage }) => {
         <span className="mb-2">{skill}</span>
         <span className="mb-2 mx-2">{percentage}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2  border-yellow-400">
+      <div className="w-full bg-gray-200 rounded-full h-2 border-2   border-yellow-400">
         <div
-          className="bg-percentage h-2 py-1 rounded-full"
+          className="bg-percentage h-2 py-1 space-y-10 rounded-full"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>
