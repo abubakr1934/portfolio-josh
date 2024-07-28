@@ -10,7 +10,7 @@ export const Review = [
     stars: "⭐⭐⭐⭐⭐",
     title: "Amazing Work!",
     content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
-    image: '/public/review-assets/image1.jpeg',
+    image: '/public/review-assets/image2.jpeg',
     name: "Tiana Phiips",
     designation: "Photographer"
   },
@@ -18,7 +18,7 @@ export const Review = [
     stars: "⭐⭐⭐⭐⭐",
     title: "Greate Quality",
     content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
-    image: '/public/review-assets/image2.jpeg',
+    image: '/public/review-assets/image1.jpeg',
     name: "Talon Westervelt",
     designation: "Business Man"
   },
@@ -92,7 +92,7 @@ const projects = [
   }
 ];
 app.use(bodyParser.json());
-let submissions = [];
+
 const skillsData = [
   {
     domain: "Front End Development",
@@ -147,10 +147,12 @@ const skillsData = [
 app.get('/skills', (req, res) => {
   res.json(skillsData);
 });
+let submissions = [];
+
 app.post('/submit', (req, res) => {
   const data = req.body;
+  console.log('Received data:', data); // Log the received data to the console
   submissions.push(data);
-
   res.status(200).json({ message: 'Data received and stored temporarily', submissions });
 });
 app.get('/api/projects', (req, res) => {

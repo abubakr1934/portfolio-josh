@@ -16,7 +16,7 @@ const Projects = () => {
       <div className="container mx-auto project-bg">
         <h2 className="text-4xl font-bold text-center mb-4">Projects</h2>
         <h4 className='text-xl  font-bold text-center mb-12 text-gray-400 text-skip-line'>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:m-14 sm:m-10 md:m-12 lg:grid-cols-3 gap-8 flex-row justify-center align-middle ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:m-14 sm:m-10 md:m-12 lg:grid-cols-3 gap-8 flex-row justify-center align-middle lg:px-14 sm:px-10 md:px-12 ">
           {Array.isArray(projects) && projects.map((project) => (
             <div key={project.id} className="bg-white shadow-2xl rounded-lg overflow-hidden w-full ">
               <img src={project.photo} alt={project.title} className="w-full h-52 object-cover " />

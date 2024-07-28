@@ -9,9 +9,9 @@ const ProgressBar = ({ skill, percentage }) => {
         <span className="mb-2">{skill}</span>
         <span className="mb-2 mx-2">{percentage}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-1.5 border-yellow-400">
+      <div className="w-full bg-gray-200 rounded-full h-2  border-yellow-400">
         <div
-          className="bg-percentage h-1.5 rounded-full"
+          className="bg-percentage h-2 py-1 rounded-full"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>
@@ -26,7 +26,7 @@ const Skills = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:5000/skills')
+    fetch('http://localhost:8000/skills')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -45,7 +45,7 @@ const Skills = () => {
 
   const handleSave = (newSkillData) => {
     // Optionally, you could also post this new skill data to the server
-    fetch('http://localhost:5000/skills', {
+    fetch('http://localhost:8000/skills', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -72,13 +72,13 @@ const Skills = () => {
 
   return (
     <div className="project-bg">
-      <h2 className="text-4xl font-bold text-black text-center py-6">Skills And Languages</h2>
+      <h2 className="text-4xl font-bold text-black text-center py-6">Skills & Languages</h2>
       <p className="text-base text-gray-400 text-center text-skip-line mb-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
      
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mx-20 p-4 gap-8">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mx-20 p-4 gap-8 ">
         {skillsData.map((domainData, index) => (
           <div key={index} className="mb-8 gap-4 bg-white px-10 py-8 mx-auto w-96 -my-4">
             <h2 className="text-xl font-semibold mb-4">{domainData.domain}</h2>
@@ -90,7 +90,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-row align-middle justify-center"> <button
+      <div className="flex flex-row align-middle justify-center py-8"> <button
         onClick={() => setIsModalOpen(true)}
         className="bg-percentage text-black font-semibold w-28 h-10 rounded-sm"
       >

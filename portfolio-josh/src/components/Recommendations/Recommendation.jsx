@@ -41,16 +41,16 @@ const Recommendation = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
             </div>
-            <div className='w-full flex'>
+            <div className='w-[85%] flex mb-4'>
                 <Swiper
                     spaceBetween={10}
-                    slidesPerView={3}
+                    slidesPerView={4}
                     centeredSlides={true}
                     pagination={{
                         dynamicBullets: true,
                         clickable: true
                     }}
-                    loop={true}
+                    loop={false}
 
                     breakpoints={{
                         640: {
