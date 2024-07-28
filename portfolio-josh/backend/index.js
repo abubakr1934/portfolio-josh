@@ -2,49 +2,49 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser'
 const app = express();
-const port = 5000;
+const port = 8000;
 
 app.use(cors()); // Enable CORS for all routes
-export const Review=[
+export const Review = [
   {
-      stars:"⭐⭐⭐⭐⭐",
-      title:"Amazing Work!",
-      content:"Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
-      image:'/public/review-assets/image1.jpeg',
-      name:"Tiana Phiips",
-      designation:"Photographer"
+    stars: "⭐⭐⭐⭐⭐",
+    title: "Amazing Work!",
+    content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
+    image: '/public/review-assets/image1.jpeg',
+    name: "Tiana Phiips",
+    designation: "Photographer"
   },
   {
-      stars:"⭐⭐⭐⭐⭐",
-      title:"Greate Quality",
-      content:"Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
-      image:'/public/review-assets/image2.jpeg',
-      name:"Talon Westervelt",
-      designation:"Business Man"
+    stars: "⭐⭐⭐⭐⭐",
+    title: "Greate Quality",
+    content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
+    image: '/public/review-assets/image2.jpeg',
+    name: "Talon Westervelt",
+    designation: "Business Man"
   },
   {
-      stars:"⭐⭐⭐⭐⭐",
-      title:"Amazing Work",
-      content:"Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
-      image:'/public/review-assets/image3.jpeg',
-      name:"James Gouse",
-      designation:"Graphic Designer"
+    stars: "⭐⭐⭐⭐⭐",
+    title: "Amazing Work",
+    content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
+    image: '/public/review-assets/image3.jpeg',
+    name: "James Gouse",
+    designation: "Graphic Designer"
   },
   {
-      stars:"⭐⭐⭐⭐⭐",
-      title:"Amazing Work",
-      content:"Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
-      image:'/public/review-assets/image4.jpeg',
-      name:"Tiana Phiips",
-      designation:"Photographer"
+    stars: "⭐⭐⭐⭐⭐",
+    title: "Amazing Work",
+    content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
+    image: '/public/review-assets/image4.jpeg',
+    name: "Tiana Phiips",
+    designation: "Photographer"
   },
   {
-      stars:"⭐⭐⭐⭐⭐",
-      title:"Greate Quality",
-      content:"Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
-      image:'/public/review-assets/image5.jpeg',
-      name:"Talon Westervelt",
-      designation:"Business Man"
+    stars: "⭐⭐⭐⭐⭐",
+    title: "Greate Quality",
+    content: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae Nulla Diam In Ac Dictum A Urna Viverra Morbi. Morbi Donec Amet....",
+    image: '/public/review-assets/image5.jpeg',
+    name: "Talon Westervelt",
+    designation: "Business Man"
   },
 ]
 const projects = [
@@ -95,15 +95,15 @@ app.use(bodyParser.json());
 let submissions = [];
 
 app.post('/submit', (req, res) => {
-    const data = req.body;
-    submissions.push(data);  
+  const data = req.body;
+  submissions.push(data);
 
-    res.status(200).json({ message: 'Data received and stored temporarily', submissions });
+  res.status(200).json({ message: 'Data received and stored temporarily', submissions });
 });
 app.get('/api/projects', (req, res) => {
   res.json(projects);
 });
-app.get('/api/reviews',(req,res)=>{
+app.get('/api/reviews', (req, res) => {
   res.json(Review)
 })
 
